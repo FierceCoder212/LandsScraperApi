@@ -1,0 +1,6 @@
+@LandsScraperApi_HostAddress = http://localhost:5217
+
+GET {{LandsScraperApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
