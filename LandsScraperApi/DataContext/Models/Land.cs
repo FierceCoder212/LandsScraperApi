@@ -11,19 +11,21 @@ public class Land
     public string? County { get; set; }
     public string? Origin { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public int CreatedAtMonth { get; set; }
-    public int CreatedAtYear { get; set; }
+    public int CreatedAtMonth { get; set; } = DateTime.UtcNow.Month;
+    public int CreatedAtYear { get; set; } = DateTime.UtcNow.Year;
     public string? Status { get; set; }
-    public float Price { get; set; }
-    public float PricePerAcre { get; set; }
-    public float Area { get; set; }
-    public float Acre { get; set; }
-    public int Bedrooms { get; set; }
-    public int Bathrooms { get; set; }
-    public bool Electricity { get; set; }
-    public bool Waterfront { get; set; }
-    public bool Mineral { get; set; }
-    public bool Well { get; set; }
-    public bool AgExempt { get; set; }
+    public float Price { get; set; } = 0.0f;
+    public float PricePerAcre { get; set; } = 0.0f;
+    public float Area { get; set; } = 0.0f;
+    public float Acre { get; set; } = 0.0f;
+    public int Bedrooms { get; set; } = 0;
+    public int Bathrooms { get; set; } = 0;
+    public bool Electricity { get; set; } = false;
+    public bool Waterfront { get; set; } = false;
+    public bool Mineral { get; set; } = false;
+    public bool Well { get; set; } = false;
+    public bool AgExempt { get; set; } = false;
     public string? Link { get; set; }
+    public string? TimeOnWebsite { get; set; }
+    public string? Address { get; set; }
 }

@@ -18,4 +18,13 @@ public class LandController(LandDbContext dbContext) : ControllerBase
         await _landDbContext.SaveChangesAsync();
         return Ok();
     }
+
+    [HttpPost]
+    [Route("SaveLand")]
+    public async Task<IActionResult> SaveLand([FromBody] Land Land)
+    {
+        await _landDbContext.AddAsync(Land);
+        await _landDbContext.SaveChangesAsync();
+        return Ok();
+    }
 }
